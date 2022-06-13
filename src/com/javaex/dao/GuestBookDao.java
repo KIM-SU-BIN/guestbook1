@@ -115,8 +115,8 @@ public class GuestBookDao {
 
 			pstmt.setString(1, guestVo.getName());
 			pstmt.setString(2, guestVo.getPassword());
-			pstmt.setString(3, guestVo.getBlank());
-			pstmt.setString(4, guestVo.getDate());
+			pstmt.setString(3, guestVo.getContent());
+			pstmt.setString(4, guestVo.getRegDate());
 			
 
 			count = pstmt.executeUpdate(); // 쿼리문 실행

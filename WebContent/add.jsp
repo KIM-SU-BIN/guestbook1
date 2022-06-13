@@ -5,13 +5,11 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-	int no = Integer.parseInt(request.getParameter("no"));
-	String password = request.getParameter("password");
+	String name = request.getParameter("name");
+	String password = request.getParameter("pass");
+	String content = request.getParameter("content");
 	
-	GuestBookVo vo = new GuestBookVo();
-	vo.setNo(no);
-	vo.setPassword(password);
-	
+	GuestBookVo vo = new GuestBookVo(name, password, content);
 	GuestBookDao dao = new GuestBookDao();
 	dao.guestInsert(vo);
 	
